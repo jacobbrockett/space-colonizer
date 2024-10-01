@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Projectile
+  - Spaceship
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2630969087
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Planets
+    uniqueID: 2227846555
+    locked: 0
+  - name: PlanetEffects
+    uniqueID: 56130921
+    locked: 0
+  - name: Ships
+    uniqueID: 482636529
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2187948377
+    locked: 0
+  - name: UI
+    uniqueID: 4117879913
+    locked: 0
