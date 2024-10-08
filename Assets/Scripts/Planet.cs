@@ -16,10 +16,16 @@ public class Planet : MonoBehaviour
     [SerializeField] float colonizeTime = 5f;
     float colonizeProgressPercentage = 0f;
 
+    bool planetColonized = false;
+
     void Awake(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color = defaultColor;
 
+    }
+
+    void Start(){
+        SolarSystemManager.singleton.RegisterPlanet(this);
     }
 
     public void SetColonizeProgress(float t)
@@ -43,12 +49,24 @@ public class Planet : MonoBehaviour
 
     void Update()
     {
+        HandleColonization();
+    }
+
+    void HandleColonization()
+    {
+        if (planetColonized){
+            return;
+        }
+
         colonizeProgressPercentage += (Time.deltaTime / colonizeTime) * visitors;
 
         if(colonizeProgressPercentage > 1)
         {
+            planetColonized = true;
             colonizeProgressSpriteRenderer.color = colonizedColor;
             colonizeProgressPercentage = 1;
+
+            SolarSystemManager.singleton.ReportPlanetColonization();
         }
 
         SetColonizeProgress(colonizeProgressPercentage);

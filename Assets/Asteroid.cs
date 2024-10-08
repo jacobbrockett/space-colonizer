@@ -92,6 +92,9 @@ public class Asteroid : MonoBehaviour
 
             BreakApart();
         }
+        else if (other.CompareTag("Spaceship")){
+            other.GetComponent<SpaceShip>().Damage();
+        }
         // Debug.Log("Collision!");
     }
 }

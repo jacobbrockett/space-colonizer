@@ -18,6 +18,8 @@ public class SpaceShip : MonoBehaviour
 
     // public Transform planet;
 
+    bool dead = false;
+
 
     void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -85,5 +87,15 @@ public class SpaceShip : MonoBehaviour
     public ProjectileLauncher GetProjectileLauncher()
     {
         return projectileLauncher;
+    }
+
+    public void Damage()
+    {
+        dead = true;
+    }
+
+    public bool IsDead()
+    {
+        return dead;
     }
 }

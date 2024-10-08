@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6fc544b936e4ecb9c58235291634f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 10
+  size: 4
   asteroidPrefab: {fileID: 8856222676881112928}
+  canBreakApart: 0
