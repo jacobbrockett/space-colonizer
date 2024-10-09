@@ -15,11 +15,6 @@ public class AmmoWindow : MonoBehaviour
     [SerializeField] Transform barTransform;
     [SerializeField] List<GameObject> hideableBarObjects;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     void SetReloadProgress(float progress) // 0.0-1.0
     {
         barTransform.localScale = new Vector3(progress, barTransform.localScale.y, 1);
@@ -43,7 +38,11 @@ public class AmmoWindow : MonoBehaviour
         }
 
         float reloadProgress = playerInputHandler.GetPlayerShip().GetProjectileLauncher().GetReloadPercentage();
+
+        // Set reload bar progress
         SetReloadProgress(reloadProgress);
+
+        // Hide or show progress limit bars
         if(reloadProgress <=0)
         {
             foreach(GameObject g in hideableBarObjects)
